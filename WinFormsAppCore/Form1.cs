@@ -5,6 +5,7 @@
         public Form1()
         {
             InitializeComponent();
+            textBox2.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,12 +104,17 @@
                         if ((hundreds > 0) || (tens > 0) || (ones > 0))
                             result = unitNumbers[hundreds] + " trăm " + result;
                     }
-                    result = " " + result;
+                    result = ", " + result;
                 }
             }
-            result = result.Trim();
+            result = result.Trim(',').Trim();
             if (isNegative) result = "Âm " + result;
-            return result + (suffix ? " đồng chẵn" : "");
+            return result + (suffix ? " " + textBox2.Text : "");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Visible = checkBox1.Checked;
         }
     }
 }

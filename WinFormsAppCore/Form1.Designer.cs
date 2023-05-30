@@ -33,13 +33,14 @@
             label1 = new Label();
             button1 = new Button();
             checkBox1 = new CheckBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
             // 
             textBox1.Location = new Point(41, 28);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(594, 23);
+            textBox1.Size = new Size(463, 23);
             textBox1.TabIndex = 0;
             // 
             // richTextBox1
@@ -72,18 +73,29 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(678, 30);
+            checkBox1.Location = new Point(523, 30);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(56, 19);
             checkBox1.TabIndex = 4;
             checkBox1.Text = "Suffix";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(579, 28);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(155, 23);
+            textBox2.TabIndex = 5;
+            textBox2.Text = "đồng chẵn";
+            textBox2.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox2);
             Controls.Add(checkBox1);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -102,5 +114,6 @@
         private Label label1;
         private Button button1;
         private CheckBox checkBox1;
+        private TextBox textBox2;
     }
 }
